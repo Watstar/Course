@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>This List, Better Than Schindler's</title>
+</head>
+<body>
+<h1>Let's get it started HA</h1>
+<div>
+	Favourite Artists of ALL Time
+
+	<ul>
+		<li>Keane</li>
+		<li>Mac Miller</li>
+		<li>Metallica
+			<ul>
+				<li>Black Album</li>
+				<li>...and Justice For All</li>
+				<li>Master of Puppets</li>
+				<li>Ride the Lightning</li>
+			</ul>
+		</li>
+		<li>Red Hot Chili Peppers</li>
+		<li>Eminem</li>
+	</ul>
+</div>
+</body>
+</html>
