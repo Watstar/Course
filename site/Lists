@@ -14,12 +14,12 @@
 		<li>Keane</li>
 		<li>Mac Miller</li>
 		<li>Metallica
-			<ul>
+			<ol>
 				<li>Black Album</li>
 				<li>...and Justice For All</li>
 				<li>Master of Puppets</li>
 				<li>Ride the Lightning</li>
-			</ul>
+			</ol>
 		</li>
 		<li>Red Hot Chili Peppers</li>
 		<li>Eminem</li>
