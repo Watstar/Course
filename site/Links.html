@@ -4,34 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Learning Links</title>
+        <style>
+          /*id selector with ^ matches any id that STARTS with the given value
+            id selector with $ matches any id that END with the given value
+            id selector with * matches any id that CONTAINS the given value 
+
+            Instead of element selectors like h6 or p, you can add class="id_here" to an element to identify a class, similar to id. 
+            This would be referred to by the css select ".id_here {}"
+            The same can be achieved with #id_here */ 
+            [id^="art"] {
+                color:cornflowerblue;
+                text-align: center;
+                text-size-adjust: 26px;
+            }
+            [id*="jump"] {
+                color:salmon;
+                text-align: center;
+                text-size-adjust: 24px;
+            }
+            [id="Image"] {
+                display: grid;
+                place-items: center;
+            }
+            h6 {
+                text-align: end;
+            }
+            h1 {
+                color:blueviolet;
+                text-align: center;
+                text-size-adjust: 32px;
+                font-weight: bolder;
+            }
+            ul {
+                text-align: center
+            }
+        </style>
 </head>
 <body>
-    <h1>Internal Links</h1>
+    <u>Internal Links</u>
     <!-- target="_blank" forces links to open in a new tab -->
     <section><div>
         Linking to a file in the same directory as this HTML file is ez, bro. This is on the same line tho:
-        <a href="lists.html" target="_blank" title="Link to Lists page">Click Here for Lists, bitch</a></div>
+        <a href="Lists.html" target="_blank" title="Link to Lists page">Click Here for Lists, bitch</a></div>
     <br>
-    <br>
+    <!-- For links on a new line, see below where to put the div tags. Inside the final a tag, after the link title closing bracket i.e. "..> <div> </div> </a>"-->
         <div>Alternatively, on this new line...</div>
-        <a href="lists.html" target="_blank" title="Link to Lists page">
+        <a href="Lists.html" target="_blank" title="Link to Lists page">
         <div>Click here for Lists, biatch</div></a>
-        <br>See, you need the div INSIDE the &lt;a&gt;&nbsp;&lt;/a&gt; tags to get it on a new line
+             See, you need the div INSIDE the &lt;a&gt;&nbsp;&lt;/a&gt; tags to get it on a new line
     </section>
-
-    <h1>External Links</h1>
+    <br>
+    <u>External Links</u>
     <section><div>
         Linking to an external reference is just as ez, bro:
         <a href="http://www.google.co.uk" target="_blank" title="External Link to Google">Google on deez nuts lma000</a>
     </div></section>
 
     <section id="Top"><h1><u>Driving test fraudster jailed for impersonating learners</u></h1></section>
-        <ul>
+        <ul style="list-style-type: none;">
             <!-- Jump up get up and get down -->
-            <li><a href="#section1">I dont want a long read...</a></li>
-            <li><a href="#section2">THE ACCUSED</a></li>
-            <li><a href="#section3">Did what, exactly..?</a></li>
-            <li><a href="#section4">What's next?</a></li>
+            <li><a href="#jump_1">I dont want a long read...</a></li>
+            <li><a href="#jump_2">THE ACCUSED</a></li>
+            <li><a href="#jump_3">Did what, exactly..?</a></li>
+            <li><a href="#jump_4">What's next?</a></li>
         </ul>
         <br>
         <!-- For local image example below;
@@ -40,41 +75,39 @@
                     Since the Pictures folder is in the current folder of the html, you do not need the main root (/site/, or the '/' in front). Just name the folder and sub-folders etc
                 2) When the source folder is in the previous root directory, you can use "<img src="../picture.jpg">"    
                 3) When it's in the same folder as the htmls, just <img src="picture.jpg"> -->
-        <img src="Pictures/Generic_Stock_Driving_Offence_Image.jpg" width="360" height="220" alt="Stock Driving Offence Graphic">
+        <div id="Image"><img src="Pictures/Generic_Stock_Driving_Offence_Image.jpg" width="360" height="220" alt="Stock Driving Offence Graphic"></div>
         <br>
     
-    <section id="section1"><h2><u>The Short of It</u></h2>
-    <h3>A man has been jailed for 33 months after admitting 26 charges including impersonating learner drivers.</h3>
-    <h6><a href="#Top">Return to Top</a></h6>
+    <section id="jump_1"><h2><u>The Short of It</u></h2></section>
+    <section id="art_1">
+        <h3>A man has been jailed for 33 months after admitting 26 charges including impersonating learner drivers.</h3></section>
+
+    <section id="jump_2"><h2><u>Who <i>SUPPOSEDLY</i> dunnit?!</u></h2></section>
+    <section id="art_2">
+        <h4>Simarjit Singh, 25, also denied 27 of the 53 charges, including one in Watford, on August 6, 2020, and these were ordered to lie on file.</h4>
     </section>
 
-    <section id="section2"><h2><u>Who <i>SUPPOSEDLY</i> dunnit?!</u></h2>
-    <h4>Simarjit Singh, 25, also denied 27 of the 53 charges, including one in Watford, on August 6, 2020, and these were ordered to lie on file.</h4>
-    <h6><a href="#Top">Return to Top</a></h6>
-    </section>
-
-    <section id="section3"><h3><u>They did what now?</u></h3>
+    <section id="jump_3"><h3><u>They did what now?</u></h3></section>
+    <section id="art_3">
         <h4>At the Watford theory test centre, he allegedly had another person&#39;s provisional licence and impersonated that person who “was required to submit themselves to a driving theory test in order to obtain a licence authorising the driving of motor vehicles”.
 
-        <br>He was also accused of possession of an article for use in fraud and fraud by false representation in other centres across the country between 2019 and 2021, and admitted to multiple charges of each.
-        </h4>
-    <h6><a href="#Top">Return to Top</a></h6>
+        <br>He was also accused of possession of an article for use in fraud and fraud by false representation in other centres across the country between 2019 and 2021, and admitted to multiple charges of each.</h4>
     </section>
 
-    <section id="section4"><h3><u>So, what now?</u></h3>
-    <h4>Singh, of Selan Gardens, Hayes, is currently in prison after being sentenced by Worcester Crown Court on April 13.</h4>
-    <h5>
-        <br>According to the Crown Prosecution Service, when a case is ordered to lie on file it means there is no verdict so proceedings are not formally terminated.
+    <section id="jump_4"><h3><u>So, what now?</u></h3></section>
+    <section id="art_4">
+        <h4>Singh, of Selan Gardens, Hayes, is currently in prison after being sentenced by Worcester Crown Court on April 13.</h4>
+
+        <h5>According to the Crown Prosecution Service, when a case is ordered to lie on file it means there is no verdict so proceedings are not formally terminated.
         
-        <br>There can be no further proceedings against the defendant on those matters without permission from the crown court or the Court of Appeal.
-    </h5>
-    <h6><a href="#Top">Return to Top</a></h6>
+        <br>There can be no further proceedings against the defendant on those matters without permission from the crown court or the Court of Appeal.</h5>
     </section>
 
-    <section><h3><i>No idea what that means...</i></h3>
-    <h4>It is often done with charges where convictions for remaining offences would have no significant impact on the overall sentence.</h4>
-    <h6><a href="#Top">Return to Top</a></h6>
+    <section id="fake_jump"><h3><i>No idea what that means...</i></h3></section>
+    <section id="art_5"><h4>It is often done with charges where convictions for remaining offences would have no significant impact on the overall sentence.</h4>
     </section>
+        <h6><a href="#Top">Return to Top</a></h6>
+    
 
 </body>
 </html>
