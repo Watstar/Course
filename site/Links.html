@@ -9,9 +9,13 @@
             id selector with $ matches any id that END with the given value
             id selector with * matches any id that CONTAINS the given value 
 
-            Instead of element selectors like h6 or p, you can add class="id_here" to an element to identify a class, similar to id. 
-            This would be referred to by the css select ".id_here {}"
-            The same can be achieved with #id_here */ 
+            Instead of element selectors like h6 or p, you can write <element class="id_here"> to identify a class, similar to id. 
+            This would be referred to by the css selector ".class_here {}"
+            The same can be achieved with "#id_here {}" while adding an id to an element with <element id="">
+                IDs are for when elements should have their own individual styles or such applied to them.
+                Classes are for when content should share the same styling.
+                I'm avoiding using classes by using the ID selectors which can target id's containing a certain value, see top comment.
+                    Though admittedly, if I were to do it again I would use classes instead of the partial ID selector. */ 
             [id^="art"] {
                 color:cornflowerblue;
                 text-align: center;
@@ -28,6 +32,7 @@
             }
             h6 {
                 text-align: end;
+                font-style: italic;
             }
             h1 {
                 color:blueviolet;
@@ -35,34 +40,83 @@
                 text-size-adjust: 32px;
                 font-weight: bolder;
             }
-            ul {
-                text-align: center
+            div > p {
+                font-style: italic;
+                font-size: 12px;
+                color:blanchedalmond
+            }
+            ul, li {
+                text-align: center;
+                margin-bottom: 3px;
+            }
+            a:link, a:visited {
+                text-decoration: underline 1px solid blue;
+                color: red;
+                margin-bottom: 3px;
+            }
+            a:hover, a:active {
+                background-color: blueviolet;
+                color:darkgoldenrod;
+            }
+            /* One link is on a new line for a reason, so it has the link text in a span tag, inside the a tag.
+            This requires a new selector to select spans inside a tags, unlike the style above which targets all a tags i.e. links without an id or class
+
+            The link was in a div but this was causing styling issues */
+            a > span:link, a:visited {
+                text-decoration: underline 1px solid blue;
+                color: red;
+                margin-bottom: 3px;
+            }
+            a > span:hover, a:active {
+                background-color: blueviolet;
+                color:darkgoldenrod;
+                width: 2;
+            }
+            /* nth-child selector will apply to the element preceding it, and the value provided in brackets.
+            Can also be a non-numerical value like odd or even */
+            li:nth-child(1) {
+                font-size: 26px;
+            }
+            body {
+                background-color:black;
+                font-family: Calibri;
+            }
+            [id^="non"]{
+                background-color: darkseagreen;
+                font-size: 12px;
+                font-family: sans-serif;
             }
         </style>
 </head>
 <body>
-    <u>Internal Links</u>
-    <!-- target="_blank" forces links to open in a new tab -->
-    <section><div>
-        Linking to a file in the same directory as this HTML file is ez, bro. This is on the same line tho:
-        <a href="Lists.html" target="_blank" title="Link to Lists page">Click Here for Lists, bitch</a></div>
-    <br>
-    <!-- For links on a new line, see below where to put the div tags. Inside the final a tag, after the link title closing bracket i.e. "..> <div> </div> </a>"-->
-        <div>Alternatively, on this new line...</div>
-        <a href="Lists.html" target="_blank" title="Link to Lists page">
-        <div>Click here for Lists, biatch</div></a>
-             See, you need the div INSIDE the &lt;a&gt;&nbsp;&lt;/a&gt; tags to get it on a new line
+    <section id="non-article links">
+        <u>Internal Links</u>
+        <!-- target="_blank" forces links to open in a new tab -->
+        <section><div>
+            Linking to a file in the same directory as this HTML file is ez, bro. This is on the same line tho:
+            <a href="Lists.html" target="_blank" title="Link to Lists page">Click Here for Lists, bitch</a></div>
+        <br>
+        <!-- For links on a new line, see below where to put the div or span tags. Inside the final a tag, after the link title closing bracket i.e. "..> <div> </div> </a>"
+        this causes the link to not be covered by CSS rules that refer to <a> tags alone. See CSS comments. -->
+            <div>Alternatively, on this new line...</div>
+            <a href="Lists.html" target="_blank" title="Link to Lists page">
+            <span>Click here for Lists, biatch</span></a>
+            <br> See, you need the div or spanINSIDE the &lt;a&gt;&nbsp;&lt;/a&gt; tags to get it on a new line
     </section>
+
     <br>
+
     <u>External Links</u>
     <section><div>
         Linking to an external reference is just as ez, bro:
         <a href="http://www.google.co.uk" target="_blank" title="External Link to Google">Google on deez nuts lma000</a>
     </div></section>
-
+</section>
     <section id="Top"><h1><u>Driving test fraudster jailed for impersonating learners</u></h1></section>
         <ul style="list-style-type: none;">
-            <!-- Jump up get up and get down -->
+            <!-- Jump up get up and get down 
+                 list-style-type: none removes the bullets from an unorganised list 
+                can also be achieved in CSS by "ul or li {list-style: none;}"-->
             <li><a href="#jump_1">I dont want a long read...</a></li>
             <li><a href="#jump_2">THE ACCUSED</a></li>
             <li><a href="#jump_3">Did what, exactly..?</a></li>
@@ -75,7 +129,12 @@
                     Since the Pictures folder is in the current folder of the html, you do not need the main root (/site/, or the '/' in front). Just name the folder and sub-folders etc
                 2) When the source folder is in the previous root directory, you can use "<img src="../picture.jpg">"    
                 3) When it's in the same folder as the htmls, just <img src="picture.jpg"> -->
-        <div id="Image"><img src="Pictures/Generic_Stock_Driving_Offence_Image.jpg" width="360" height="220" alt="Stock Driving Offence Graphic"></div>
+        <div id="Image"><img src="Pictures/Generic_Stock_Driving_Offence_Image.jpg" width="360" height="220" alt="Stock Driving Offence Graphic">
+        <div>
+            <p>Credit to <a href="https://www.watfordobserver.co.uk/" target="_blank" title="Link to Watford Observer">Watford Observer</a> for this image</p>
+        </div>
+        </div>
+        <!-- Above is text in a div wrapper inside the div wrapper for the image, to create text under the image -->
         <br>
     
     <section id="jump_1"><h2><u>The Short of It</u></h2></section>
