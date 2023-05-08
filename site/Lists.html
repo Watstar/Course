@@ -4,35 +4,156 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>This List, Better Than Schindler's</title>
+		<style>
+			body {
+            	background-color:black;
+                font-family: Calibri;
+				}
+			h6 {
+                text-align: end;
+                font-style: italic;
+            }
+			a:link, a:visited {
+                text-decoration: underline 1px solid blue;
+                color:blanchedalmond;
+                margin-bottom: 3px;
+				border-color: blanchedalmond;
+            }
+            a:hover, a:active {
+                background-color: blueviolet;
+                color:darkgoldenrod;
+				border-color: orange;
+            }
+			.navlink {
+				text-align: center;
+				color:blanchedalmond;
+				font-size: 18px;
+			}
+			.title {
+				Color: orange;
+				font-size: 36px;
+				text-align: center; 
+			}
+			[id="disclaimer"] {
+				Text-align: center;
+				font-size: 22px;
+				color:cornflowerblue;
+				font-style: italic;
+			}
+			.List_Type {
+				color:aquamarine;
+				font-size: 20px;
+				text-align: center;
+				text-decoration: underline 1px aquamarine;
+			}
+			.list {
+				color: cornflowerblue;
+				text-align: center;
+				font-size: 18px;
+				list-style-position: inside;
+			}
+			.internal_list {
+				text-indent: 100px;
+				color:blanchedalmond;
+				font-style: italic;
+				font-size: 14px;
+			}
+		</style>
+
 </head>
 <body>
-<h1>Let's get it started HA</h1>
-<div>
-	Favourite Artists of ALL Time
+<h1 class="title">Let's get it started, HA</h1>
+<div id="disclaimer">In no particular order, and all my own opinion...</div>
+<br>
+<br>
+	<div class="List_Type">
+	5 Favourite Artists of ALL Time
+	</div>
+	<section class="list">
+		<ul style="list-style-type: none;">
+			<li>Keane</li>
+			<li>Mac Miller</li>
+			<li>Metallica
+				<div class="internal_list">
+					<ol>
+						<li>Black Album</li>
+						<li>...and Justice For All</li>
+						<li>Master of Puppets</li>
+						<li>Ride the Lightning</li>
+					</ol>
+				</div>
+			</li>
+			<li>Red Hot Chili Peppers</li>
+			<li>Eminem</li>
+		</ul>
+	</section>
 
+	<div class="List_Type">
+	5 Favourite Video Games of ALL Time
+	</div>
+	<section class="list">
+		<ul style="list-style-type: none;">
+			<li>RuneScape 2, Old School RuneScape</li>
+			<li>World of Warcraft</li>
+				<div class="internal_list">
+					<ol>
+						<li>Wrath of the Lich King</li>
+						<li>Mists of Pandaria</li>
+						<li>The Burning Crusade</li>
+					</ol>
+				</div>
+			<li>League of Legends</li>
+			<li>GTA: Vice City</li>
+			<li>The Legend of Zelda: The Wind Waker</li>
+		</ul>
+	</section>
+
+	<div class="List_Type">
+		5 Favourite Animals of ALL Time
+	</div>
+	<section class="list">
+		<ul style="list-style-type: none;">
+			<li>Penguins</li>
+			<li>Cats <i>&#40;large &amp; small&#41;</i></li>
+			<li>Giraffes</li>
+			<li>Turtles</li>
+			<li>Fishies</li>
+		</ul>
+	</section>
+
+	<div class="List_Type">
+		5 Favourite Car Brands of ALL Time
+	</div>
+	<section class="list">
+		<ul style="list-style-type: none;">
+			<li>Audi</li>
+			<li>Mercedes</li>
+			<li>Honda/Acura</li>
+			<li>Koenigsegg</li>
+			<li>Pagani</li>
+		</ul>
+	</section>
+	
+	<div class="List_Type">
+		5 Favourite Genres of Music
+	</div>
+	<section class="list">
+		<ul style="list-style-type: none;">
+			<li>Rock, Heavy Rock, Metal</li>
+			<li>Rap, Hip-Hop</li>
+			<li>Electronic, Drum &amp; Bass, Dance</li>
+			<li>Game Music, Soundtracks</li>
+			<li>Easy Listening, Adult Contemporary</li>
+		</ul>
+	</section>
+		
+<section class="navlink">
 	<ul>
-		<li>Keane</li>
-		<li>Mac Miller</li>
-		<li>Metallica
-			<ol>
-				<li>Black Album</li>
-				<li>...and Justice For All</li>
-				<li>Master of Puppets</li>
-				<li>Ride the Lightning</li>
-			</ol>
-		</li>
-		<li>Red Hot Chili Peppers</li>
-		<li>Eminem</li>
-	</ul>
-</div>
-<section>
-<a href="links.html" title="Link to Links page">
-	<div>You done goofed. Get back to links!</div></a>
-	<ul>
-	<a href="index.html" title="Link to index page">Click Here for Index, bitch</a></div>
-	<a href="Links.html" title="Link to links page">Click Here for links, bitch</a></div>
-	<a href="Structure.html" title="Link to structure page">Click Here for structure, bitch</a></div>
+	<a href="index.html" title="Link to index page">Click Here for Index, buddy.</a></div>
+	<a href="Links.html" title="Link to links page">Click Here for Links, guy.</a></div>
+	<a href="Structure.html" title="Link to structure page">Click Here for Structure, friend.</a></div>
 	</ul>
 </section>
+	<h6><a href="#disclaimer"><u><i>Return to Top</i></u></a></h6>
 </body>
 </html>

@@ -4,6 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<Style>
+			body {
+                background-color:black;
+                font-family: Calibri;
+			}
 			h1 {
 				Color: orange;
 				font-size: 36px;
@@ -14,30 +18,78 @@
 				font-size: 20px;
 				text-align: center;
 			}
-			h3 {
+			.Brief {
 				color:blueviolet;
 				font-size: 18px;
 				text-align: center;
 			}
-			ul {
-				color:chocolate;
-				font-size: 12px;
+			.navlink {
 				text-align: center;
+				color:blanchedalmond;
+				font-size: 18px;
 			}
+			.name {
+				Text-align: center;
+				font-size: 22px;
+				color:cornflowerblue;
+			}
+			[id="Real"] {
+				font-size: 24px;
+				font-style: italic;
+				font-family: sans-serif;
+				color:blanchedalmond;
+			}
+			[id="Brief"] {
+				Text-align: center;
+				font-size: 28px;
+				color:cornflowerblue;
+			}
+			a:link, a:visited {
+                text-decoration: underline 1px solid blue;
+                color:blanchedalmond;
+                margin-bottom: 3px;
+				border-color: blanchedalmond;
+            }
+            a:hover, a:active {
+                background-color: blueviolet;
+                color:darkgoldenrod;
+				border-color: orange;
+            }
+
 		</Style>
 
-	<title>Nicole... </title>
+	<title>The Most Awesome</title>
 </head>
 <body>
-<h1>Helloooooo...</h1>
-<h2>is it me you're looking for?</h2>
+	<section id=Title> 
+		<h1>Welcome to The Most Amazing Website, by Yours Truly...</h1>
+		<p class=name>Jamie Wiseman</p>
+	</section>
 
-<h3>I can see it in your eyes...</h3>
-<h3>I can see it in your, smileee...</h3>
-	<ul>
-		<div><a href="Lists.html" title="Link to Lists page">Click Here for Lists, bitch</a></div>
-		<div><a href="Links.html" title="Link to links page">Click Here for links, bitch</a></div>
-		<div><a href="Structure.html" title="Link to structure page">Click Here for structure, bitch</a></div>
-	</ul>
+	<section class="navlink">
+		<ul>
+		<a href="Lists.html" title="Link to index page">Click Here for Lists, buddy.</a></div>
+		<a href="Links.html" title="Link to links page">Click Here for Links, guy.</a></div>
+		<a href="Structure.html" title="Link to structure page">Click Here for Structure, friend.</a></div>
+		</ul>
+	</section>
+
+	<section id="Brief">
+		Here I will try to explore, learn, and develop my knowledge of HTML, CSS, and beyond.
+		<br>
+		If anyone finds themselves here... <i>how?</i>
+		<br>
+		But also, expect things put together in seemingly random, but important, orders and wording. 
+		<br>
+		Questionable practices aside, the way things are put together are for my own education and development.
+		<br>
+		What may not make sense to you might make perfect sense for me to try new things. 
+		<p id="Real">But regardless, no-one else is seeing this so #YOLO LMA0000</p>
+		<div>
+			<img src="https://i.kym-cdn.com/entries/icons/original/000/024/884/73.jpg" title="73, the numberal" width="160" height="160">
+			<img src="https://cdn.betterttv.net/emote/5f4e812568d9d86c020d9828/3x.webp" title="JoyASteroid" width="160" height="160">
+		</div>
+	</section>
+
 </body>
 </html>
