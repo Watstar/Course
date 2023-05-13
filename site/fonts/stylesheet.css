@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'RuneScape UF';
+    src: url(G:/Course/site/fonts/RuneScape-UF.woff2) format('woff2'),
+         url(G:/Course/site/fonts/RuneScape-UF.woff) format('woff'),
+         url(G:/Course/site/fonts/RuneScape-UF.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
