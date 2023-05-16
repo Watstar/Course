@@ -1,0 +1,50 @@
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 16px;
+    font-weight: normal;
+}
+h6 {
+    text-align: end;
+    font-style: italic;
+    font-weight: lighter;
+}
+.List_Head {
+    color:dodgerblue;
+    font-size: 20px;
+    text-decoration: underline 1px dodgerblue;
+}
+.list > ul {
+    font-weight: normal;
+    font-size: 18px;
+    list-style-type: none;
+    padding-left: 0;
+}
+.internal_list {
+    text-indent: 40px;
+    color: #66e0ff;
+    font-style: italic;
+    outline: 1px;
+    font-size: 15px;
+    list-style-position: inside;
+}
+.desc {
+    font-size: 20px;
+    font-weight: normal;
+}
+.title {
+    font-size: 36px;
+}
+.name {
+    font-size: 22px;
+}
+[id="Real"] {
+    font-size: 28px;
+    font-style: italic;
+    color:dodgerblue;
+    font-weight: bolder;
+}
