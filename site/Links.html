@@ -3,92 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles\base_links.css">
+	<link rel="stylesheet" href="styles\texts.css">
+	<link rel="stylesheet" href="styles\images.css">
     <title>Learning Links</title>
-        <style>
-            body {
-                background-color: black;
-            }
-          /*id selector with ^ matches any id that STARTS with the given value
-            id selector with $ matches any id that END with the given value
-            id selector with * matches any id that CONTAINS the given value 
-
-            Instead of element selectors like h6 or p, you can write <element class="id_here"> to identify a class, similar to id. 
-            This would be referred to by the css selector ".class_here {}"
-            The same can be achieved with "#id_here {}" while adding an id to an element with <element id="">
-                IDs are for when elements should have their own individual styles or such applied to them.
-                Classes are for when content should share the same styling.
-                I'm avoiding using classes by using the ID selectors which can target id's containing a certain value, see top comment.
-                    Though admittedly, if I were to do it again I would use classes instead of the partial ID selector. */ 
-            [id^="art"] {
-                color:cornflowerblue;
-                text-align: center;
-                text-size-adjust: 26px;
-            }
-            [id*="jump"] {
-                color:salmon;
-                text-align: center;
-                text-size-adjust: 24px;
-            }
-            [id="Image"] {
-                display: grid;
-                place-items: center;
-            }
-            h6 {
-                text-align: end;
-                font-style: italic;
-            }
-            h1 {
-                color: orange;
-                text-align: center;
-                text-size-adjust: 32px;
-                font-weight: bolder;
-            }
-            div > p {
-                font-style: italic;
-                font-size: 12px;
-                color:blanchedalmond
-            }
-            ul, li {
-                text-align: center;
-                margin-bottom: 3px;
-            }
-			a:link, a:visited {
-                text-decoration: underline 1px solid blue;
-                color:blanchedalmond;
-                margin-bottom: 3px;
-				border-color: blanchedalmond;
-            }
-            a:hover, a:active {
-                background-color: blueviolet;
-                color:darkgoldenrod;
-				border-color: orange;
-            }
-            /* One link is on a new line for a reason, so it has the link text in a span tag, inside the a tag.
-            This requires a new selector to select spans inside a tags, unlike the style above which targets all a tags i.e. links without an id or class
-
-            The link was in a div but this was causing styling issues */
-            a > span:link, a:visited {
-                text-decoration: underline 1px solid blue;
-                color: red;
-                margin-bottom: 3px;
-            }
-            a > span:hover, a:active {
-                background-color: blueviolet;
-                color:darkgoldenrod;
-                width: 2;
-            }
-            /* nth-child selector will apply to the element preceding it, and the value provided in brackets.
-            Can also be a non-numerical value like odd or even */
-            li:nth-child(1) {
-                font-size: 26px;
-            }
-            [id^="non"]{
-                background-color: darkseagreen;
-                font-size: 12px;
-                font-family: sans-serif;
-            }
-        </style>
 </head>
+
 <body>
     <section id="non-article links">
         <u>Internal Links</u>
@@ -114,27 +34,25 @@
     </section>
 </section>
 
-<section class="navlink">
+    <section class="navlink">
     <ul>
     <a href="index.html" title="Link to index page">Click Here for Index, buddy.</a></div>
     <a href="Lists.html" title="Link to Lists page">Click Here for Lists, guy.</a></div>
     <a href="Structure.html" title="Link to Structure page">Click Here for Structure, friend.</a></div>
     </ul>
-</section>
+    </section>
 
-<section>
-    <h1>I AM LEAVING THIS PAGE AWAY FROM STYLESHEETS BECAUSE IT'S GOOD FOR REFERENCING BITS OF INFO</h1>
-</section>
-
-    <section id="Top"><h1><u>Driving test fraudster jailed for impersonating learners</u></h1></section>
-        <ul style="list-style-type: none;">
-            <!-- Jump up get up and get down 
-                 list-style-type: none removes the bullets from an unorganised list 
-                can also be achieved in CSS by "ul or li {list-style: none;}"-->
-            <li><a href="#jump_1">I dont want a long read...</a></li>
-            <li><a href="#jump_2">THE ACCUSED</a></li>
-            <li><a href="#jump_3">Did what, exactly..?</a></li>
-            <li><a href="#jump_4">What's next?</a></li>
+    <section class="title"><h1><u>Driving test fraudster jailed for impersonating learners</u></h1></section>
+        <div class="list">
+            <ul>
+                <!-- Jump up get up and get down
+                     list-style-type: none removes the bullets from an unorganised list
+                    can also be achieved in CSS by "ul or li {list-style: none;}"-->
+                <li><a href="#jump_1">I dont want a long read...</a></li>
+                <li><a href="#jump_2">THE ACCUSED</a></li>
+                <li><a href="#jump_3">Did what, exactly..?</a></li>
+                <li><a href="#jump_4">What's next?</a></li>
+        </div>
         </ul>
         <br>
         <!-- For local image example below;
@@ -145,41 +63,77 @@
                 3) When it's in the same folder as the htmls, just <img src="picture.jpg"> -->
         <div id="Image"><img src="Pictures/Generic_Stock_Driving_Offence_Image.jpg" width="360" height="220" alt="Stock Driving Offence Graphic">
         <div>
-            <p>Credit to <a href="https://www.watfordobserver.co.uk/" target="_blank" title="Link to Watford Observer">Watford Observer</a> for this image</p>
+            <p><i>Credit to <a href="https://www.watfordobserver.co.uk/" target="_blank" title="Link to Watford Observer">Watford Observer</a> for this image</i></p>
         </div>
         </div>
         <!-- Above is text in a div wrapper inside the div wrapper for the image, to create text under the image -->
         <br>
     
-    <section id="jump_1"><h2><u>The Short of It</u></h2></section>
+    <section id="jump_1" class="desc"><h2><u>The Short of It</u></h2></section>
     <section id="art_1">
-        <h3>A man has been jailed for 33 months after admitting 26 charges including impersonating learner drivers.</h3></section>
+        <div class="square-brackets-quote">
+            <blockquote>
+                A man has been jailed for 33 months after admitting 26 charges including impersonating learner drivers.
+            </blockquote>
+        </div>
+    </section>
 
-    <section id="jump_2"><h2><u>Who <i>SUPPOSEDLY</i> dunnit?!</u></h2></section>
+    <section id="jump_2" class="desc"><h2><u>Who <i>SUPPOSEDLY</i> dunnit?!</u></h2></section>
     <section id="art_2">
-        <h4>Simarjit Singh, 25, also denied 27 of the 53 charges, including one in Watford, on August 6, 2020, and these were ordered to lie on file.</h4>
+        <div class="square-brackets-quote">
+            <blockquote>Simarjit Singh, 25, also denied 27 of the 53 charges, including one in Watford, on August 6, 2020, and these were ordered to lie on file.</p>
+            </blockquote>
+        </div>
     </section>
 
-    <section id="jump_3"><h3><u>They did what now?</u></h3></section>
+    <section id="jump_3" class="desc"><h3><u>They did what now?</u></h3></section>
     <section id="art_3">
-        <h4>At the Watford theory test centre, he allegedly had another person&#39;s provisional licence and impersonated that person who “was required to submit themselves to a driving theory test in order to obtain a licence authorising the driving of motor vehicles”.
-
-        <br>He was also accused of possession of an article for use in fraud and fraud by false representation in other centres across the country between 2019 and 2021, and admitted to multiple charges of each.</h4>
+        <div class="square-brackets-quote">
+            <blockquote>At the Watford theory test centre, he allegedly had another person&#39;s provisional licence and impersonated that person who ..<div class="square-brackets-quote">
+            </blockquote>
+        </div>
+            <br>
+        <div class="square-brackets-quote">
+            <blockquote>
+            <p><i>“was required to submit themselves to a driving theory test in order to obtain a licence authorising the driving of motor vehicles”
+            </i></p>
+            </blockquote>
+        </div>
+            <br>
+        <div class="square-brackets-quote">
+            <blockquote>
+            He was also accused of possession of an article for use in fraud and fraud by false representation in other centres across the country between 2019 and 2021, and admitted to multiple charges of each.</p>
+            </blockquote>
+        </div>
     </section>
 
-    <section id="jump_4"><h3><u>So, what now?</u></h3></section>
+    <section id="jump_4" class="desc"><h3><u>So, what now?</u></h3></section>
     <section id="art_4">
-        <h4>Singh, of Selan Gardens, Hayes, is currently in prison after being sentenced by Worcester Crown Court on April 13.</h4>
+        <div class="square-brackets-quote">
+            <blockquote>Singh, of Selan Gardens, Hayes, is currently in prison after being sentenced by Worcester Crown Court on April 13.</p>
+            </blockquote>
+        </div>
+        <br>
+        <div class="square-brackets-quote">
+            <blockquote>According to the Crown Prosecution Service, when a case is ordered to lie on file it means there is no verdict so proceedings are not formally terminated.
+            </blockquote>
+        </div>
+        <br>
+        <div class="square-brackets-quote">
+            <blockquote>There can be no further proceedings against the defendant on those matters without permission from the crown court or the Court of Appeal.</h5>
+            </blockquote>
+        </div>
+     </section>
 
-        <h5>According to the Crown Prosecution Service, when a case is ordered to lie on file it means there is no verdict so proceedings are not formally terminated.
-        
-        <br>There can be no further proceedings against the defendant on those matters without permission from the crown court or the Court of Appeal.</h5>
+    <section id="fake_jump" class="desc"><h3><i>No idea what that means...</i></h3></section>
+    <section id="art_5">        
+        <div class="square-brackets-quote">
+            <blockquote>It is often done with charges where convictions for remaining offences would have no significant impact on the overall sentence.</h4>
+            </blockquote>
+        </div>  
     </section>
 
-    <section id="fake_jump"><h3><i>No idea what that means...</i></h3></section>
-    <section id="art_5"><h4>It is often done with charges where convictions for remaining offences would have no significant impact on the overall sentence.</h4>
-    </section>
-        <h6><a href="#Top">Return to Top</a></h6>
+    <h6 class="return"><a href="#non-article links">Return to Top</a></h6>
     
 </body>
 </html>

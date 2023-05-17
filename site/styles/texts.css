@@ -14,7 +14,7 @@ h4 {
     font-weight: normal;
     color: yellow;
 }
-h6 {
+.return {
     text-align: end;
     font-style: italic;
     font-weight: lighter;
@@ -37,6 +37,29 @@ h6 {
     outline: 1px;
     font-size: 15px;
     list-style-position: inside;
+}
+.square-brackets-quote {
+    background-color: #FCF5E5;
+    max-width:20em;
+    color: black;
+    margin: 0 auto; /* Add margin: 0 auto; to horizontally center the element */
+    display: flex; /* Add flex display to the parent container */
+    justify-content: center; /* Center the child elements horizontally */
+    align-items: center; /* Center the child elements vertically */
+}
+.square-brackets-quote:hover {
+    transition: transform 330ms ease-in-out;
+    transform: scale(1.4); /* 2 = 200% etc. Too large will cause issues */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+blockquote {
+    border:solid 0.2em #ccc;
+    display:inline-block;
+    margin: 0;
+    padding: 0.1em;
+    position: relative;
 }
 [id="Real"] {
     font-size: 28px;
